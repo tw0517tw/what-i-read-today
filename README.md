@@ -13,7 +13,8 @@
 ## 輔助
 
 我用以下這個 bookmarklet 產生一個包含 `document.title` 和 `window.location` 的 markdown 無序列表項目方便我複製貼上。  
-可以直接將這段語法複製到新的書籤列的網址欄位使用。
+可以在書籤列建立一個新的書籤，以這段語法當作他的網址，之後就可以直接點擊使用。  
+目前發現 GitHub 和 Twitter 會出現 `Content Security Policy: 頁面的設定阻擋了 self 的資源載入` 錯誤，無法使用 bookmarklet 會有點困擾，只能打開 console 自己複製 title。
 
 ```
 javascript:(function(){var%20title=document.title;var%20href=window.location;window.prompt('','-%20['+title+']('+href+')');})();
